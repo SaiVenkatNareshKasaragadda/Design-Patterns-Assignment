@@ -1,3 +1,4 @@
+//Login class implements Facade Pattern
 import java.io.*;
 import java.util.*;
 import java.awt.*;
@@ -121,8 +122,3 @@ public class Login extends JFrame{
         return loginStatus; 
     }
 }
-
-    
-    
-    
-
