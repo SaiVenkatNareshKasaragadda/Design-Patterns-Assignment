@@ -22,9 +22,4 @@ public void MoveToHead(){
 public void Remove(){
     biddingList.remove(position);
 }
-
-
-
-
-
 }
