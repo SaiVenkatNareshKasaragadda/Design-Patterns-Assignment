@@ -1,4 +1,4 @@
-import javax.swing.JFrame;
+//Trading Menu class will be used to render GUI
 import javax.swing.JOptionPane;
 public class TradingMenu {
 
