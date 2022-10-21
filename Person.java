@@ -1,4 +1,4 @@
-
+//abstract class
 public abstract class Person {
     private String username;
     private String password;
