@@ -1,3 +1,4 @@
+//Bridge and Factory Patterns are implemented here
 import java.io.*;
 import java.util.*;
 import java.awt.Window.*;
@@ -41,60 +42,113 @@ public class ProduceProductMenu implements ProductMenu{
         frame.setSize(500,400);
         frame.setLocation(400,350);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        addTrading.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Add Info of Trade here");
 
+            }
+        });
+        viewProductList.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"All Products are displayed here");
+
+            }
+        });
+        viewTrading.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"All Trades are displayed here");
+
+            }
+        });
+        viewOffering.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"view the offer of seller here");
+
+            }
+        });
+        reminder.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"deadlines and reminders about trades are displayed here");
+
+            }
+        });
+        createUser.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"User will be created");
+
+            }
+        });
+        attach.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Attach products to the new user here");
+
+            }
+        });
+        list.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Select Product from the list of all products");
+
+            }
+        });
+        operation.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Respective menu is created and returned based on the user type");
+
+            }
+        });
     }
 
     @Override
     public void createProductList() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void attachProductToUser() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void courseOperation() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void showMenu() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void showAddButton() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void showViewButton() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void showRadioButton() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void showLabels() {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void showComboxes() {
-        // TODO Auto-generated method stub
+        
         
     }
     
