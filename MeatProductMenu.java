@@ -1,3 +1,4 @@
+//Bridge and Factory Patterns are implemented here
 import java.io.*;
 import java.util.*;
 import java.awt.Window.*;
@@ -8,10 +9,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MeatProductMenu implements ProductMenu {
+    private String username;
+    private String password;
+    private Facade facade;
     private Person person;
 
-    public MeatProductMenu(Person person) {
-        this.person = person;
+    public MeatProductMenu(String username, String password, Facade facade) {
+        this.username = username;
+        this.password = password;
+        this.facade = facade;
         
         JFrame frame = new JFrame("Menu");
         JPanel meatMenuPanel = new JPanel(new GridLayout(9,1));
@@ -38,11 +44,60 @@ public class MeatProductMenu implements ProductMenu {
         frame.setSize(500,400);
         frame.setLocation(400,350);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        addTrading.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Add Info of Trade here");
 
+            }
+        });
+        viewProductList.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"All Products are displayed here");
 
+            }
+        });
+        viewTrading.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"All Trades are displayed here");
 
-        
-        
+            }
+        });
+        submitOffering.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"submit the final offer to seller here");
+
+            }
+        });
+        reminder.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"deadlines and reminders about trades are displayed here");
+
+            }
+        });
+        createUser.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"User will be created");
+
+            }
+        });
+        attach.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Attach products to the new user here");
+
+            }
+        });
+        list.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Select Product from the list of all products");
+
+            }
+        });
+        operation.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showMessageDialog(null,"Respective menu is created and returned based on the user type");
+
+            }
+        });
     }
 
     @Override
