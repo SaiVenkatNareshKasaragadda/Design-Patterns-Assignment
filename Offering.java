@@ -1,16 +1,16 @@
-
+import javax.swing.JOptionPane;
 public class Offering{
 
     public void decidebidding() {
-        System.out.println("Decide Bidding");
+        JOptionPane.showMessageDialog(null,"No Trades to Bid");
     }
 
     public void discussbidding() {
-        System.out.println("Discuss Bidding");
+        JOptionPane.showMessageDialog(null,"No Trades to Discuss Bid");
     }
 
     public void submitbidding() {
-        System.out.println("Submit Bidding");
+        JOptionPane.showMessageDialog(null,"No Trades to Submit Bid");
     }
 
 }
