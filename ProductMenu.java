@@ -1,18 +1,8 @@
-
-interface ProductMenu {
-
-    default void display(){
-        
-
-    
-    }
-
+//abstract class
+public interface ProductMenu {
     void createProductList();
-
     void attachProductToUser();
-
     void courseOperation();
-
     void showMenu();
     void showAddButton();
     void showViewButton();
