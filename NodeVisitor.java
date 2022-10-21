@@ -1,4 +1,4 @@
-
+//Visitor Pattern is implemented here
 public abstract class NodeVisitor {
 
     public abstract void visitProduct(Product product);
