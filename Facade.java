@@ -1,4 +1,9 @@
-
+/*Facade pattern will implement the Bridge Pattern, Iterator Pattern and Visitor Pattern */
+import java.io.*;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Iterator;
 
 public class Facade{
     private int UserType;
@@ -6,6 +11,7 @@ public class Facade{
     private int nProductCategory;
     private ClassProductList theProductList;
     private Person thePerson;
+    HashMap<String,String> productsList = new HashMap<String,String>();
 
     public boolean login(){
         Login login = new Login(this);
@@ -52,9 +58,15 @@ public class Facade{
 
     }
     public void createProductList(){
-        Product create = new Product();
-        create.createProductList();
+       try{
+        Scanner scanner = new Scanner(new File("ProductInfo.txt"));
+        while(scanner.hasNextLine()){
+            String eachProduct = scanner.nextLine();
+            String[] products = eachProduct.split(":");
+            productsList.put(products[0],products[1]);
+        }
 
+       }catch(FileNotFoundException ae){ae.printStackTrace();}
     }
     public void attachProductToUser(){
         Product attach = new Product();
@@ -62,7 +74,7 @@ public class Facade{
 
     }
     public Product SelectProduct(){
-        Product selectProduct = new Product("","");
+        Product selectProduct = new Product();
         selectProduct.SelectProduct();
         return selectProduct;
 
@@ -73,5 +85,16 @@ public class Facade{
 
     }
 
+    public Person getPerson(){
+        return thePerson;
+    }
+
+    public int getUserType(){
+        return UserType;
+    }
+
+    public void accept(ReminderVisitor reminderVisitor){
+        
+    }
 
 }
