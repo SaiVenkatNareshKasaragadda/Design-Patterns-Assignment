@@ -1,4 +1,4 @@
-import javax.swing.JOptionPane;
+//Visitor pattern is implemented here
 public class ReminderVisitor extends NodeVisitor {
     private Reminder m_Reminder;
 
