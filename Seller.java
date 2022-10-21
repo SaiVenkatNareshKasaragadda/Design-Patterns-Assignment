@@ -1,3 +1,4 @@
+//Seller class will inherit the Person class and implements Bridge pattern
 import java.io.*;
 import java.util.*;
 import java.awt.Window.*;
@@ -12,9 +13,7 @@ public class Seller extends Person {
     private Facade facade;
 
     public Seller(String username, String password, Facade facade) {
-        this.username = username;
-        this.password = password;
-        this.facade = facade;
+        super(username, password, facade);
         JFrame frame = new JFrame("Select Menu");
         JPanel menuPanel = new JPanel();
         ButtonGroup buttons = new ButtonGroup();
@@ -46,7 +45,6 @@ public class Seller extends Person {
 
     }});}
     
-
     @Override
     public void showMenu() {   
         
