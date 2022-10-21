@@ -1,3 +1,4 @@
+//Buyer class will inherit the Person class and implements Bridge pattern
 import java.io.*;
 import java.util.*;
 import java.awt.Window.*;
@@ -13,20 +14,6 @@ public class Buyer extends Person{
 
     public Buyer(String username, String password, Facade facade){
         super(username,password,facade);
-    }
-        
-
-
-
-
-    @Override
-    public void showMenu() {
-        
-    }
-
-    @Override
-    public ProductMenu creatProductMenu() {
-        
         JFrame frame = new JFrame("Select Menu");
         JPanel menuPanel = new JPanel();
         ButtonGroup buttons = new ButtonGroup();
@@ -48,7 +35,7 @@ public class Buyer extends Person{
         submit.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae) {
                 if(meatProductMenuButton.isSelected()){
-                    super. = new MeatProductMenu(Person person);
+                    new MeatProductMenu(username, password, facade);
                     frame.dispose();
                 }
                 else if(produceProductMenuButton.isSelected()){
@@ -57,6 +44,15 @@ public class Buyer extends Person{
                 }
 
     }});
+    }
+    @Override
+    public void showMenu() {
+        
+    }
+
+    @Override
+    public ProductMenu creatProductMenu() {
+        
         return null;
     
 }
