@@ -1,3 +1,4 @@
+//Iterator Pattern is implemented here to iterate through list of products
 public class ProductIterator implements ListIterator {
 
     private ClassProductList productslist;
